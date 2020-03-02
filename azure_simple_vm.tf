@@ -7,10 +7,10 @@ provider "azurerm" {
     version = "~> 1.44"
 }
 
-variable "subsId" {}
-variable "clientId" {}
-variable "clientSecret" {}
-variable "tenantId" {}
+variable "subsId" {default=""}
+variable "clientId" {default=""}
+variable "clientSecret" {default=""}
+variable "tenantId" {default=""}
 
 variable "hostname" {
   type = string
