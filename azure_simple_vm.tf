@@ -1,7 +1,16 @@
 # Configure the Microsoft Azure Provider
 provider "azurerm" {
-  version = "~> 1.44"
+    subscription_id = "${var.subsId}"
+    client_id       = "${var.clientId}"
+    client_secret   = "${var.clientSecret}"
+    tenant_id       = "${var.tenantId}"
+    version = "~> 1.44"
 }
+
+variable "subsId" {}
+variable "clientId" {}
+variable "clientSecret" {}
+variable "tenantId" {}
 
 variable "hostname" {
   type = string
