@@ -3,8 +3,11 @@ variable "aws_region" {
   default     = "us-east-1"
 }
 
-variable "secretkey" {}
-variable "accesskey" {}
+variable "secretkey" {
+}
+
+variable "accesskey" {
+}
 
 variable "az_count" {
   description = "Number of AZs to cover in a given AWS region"
@@ -43,3 +46,4 @@ variable "service_desired" {
 variable "admin_cidr_ingress" {
   description = "CIDR to allow tcp/22 ingress to EC2 instance"
 }
+
