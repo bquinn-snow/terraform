@@ -25,6 +25,10 @@ variable "environment" {
   type = string
 }
 
+variable "owner" {
+  type = string
+}
+
 variable "resource_group" {
   type = string
 }
@@ -36,6 +40,7 @@ resource "azurerm_resource_group" "myterraformgroup" {
 
     tags = {
         environment = var.environment
+        owner = var.owner
     }
 }
 
@@ -48,6 +53,7 @@ resource "azurerm_virtual_network" "myterraformnetwork" {
 
     tags = {
         environment = var.environment
+        owner = var.owner
     }
 }
 
@@ -68,6 +74,7 @@ resource "azurerm_public_ip" "myterraformpublicip" {
 
     tags = {
         environment = var.environment
+        owner = var.owner
     }
 }
 
@@ -91,6 +98,7 @@ resource "azurerm_network_security_group" "myterraformnsg" {
 
     tags = {
         environment = var.environment
+        owner = var.owner
     }
 }
 
@@ -110,6 +118,7 @@ resource "azurerm_network_interface" "myterraformnic" {
 
     tags = {
         environment = var.environment
+        owner = var.owner
     }
 }
 
@@ -133,6 +142,7 @@ resource "azurerm_storage_account" "mystorageaccount" {
 
     tags = {
         environment = var.environment
+        owner = var.owner
     }
 }
 
@@ -178,5 +188,6 @@ resource "azurerm_virtual_machine" "myterraformvm" {
 
     tags = {
         environment = var.environment
+        owner = var.owner
     }
 }
