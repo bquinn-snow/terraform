@@ -18,6 +18,7 @@ variable "hostname" {
 
 variable "reg" {
   type = string
+  default = "eastus"
 }
 
 variable "environment" {
